@@ -1,0 +1,29 @@
+{
+  "name": "NeonCRM",
+  "description": "Neon CRM is a cloud-based CRM platform built for non-profit and other mission-driven organizations that allows organizations to track and interact with their constituents. Whether you're using an out-of-the-box implementation or a custom implementation, the Bytespree connector for NeonCRM is able to download all of your NeonCRM data.",
+  "instructions": "<div><p>Neon CRM uses <strong>API Key</strong> and the organization's <strong>Org ID</strong> to authenticate access to its API.</p><ol><li>Organization ID</li><ul><li>To find your org ID, go to the <strong>Settings</strong> cog > <strong>Organization Profile</strong></li><li>Locate the Account Information section and find Organization ID.</li></ul><li>API Key</li><ul><li>An API key is associated with a user in Neon CRM, and they inherit all the same permissions that their associated user has in the Neon CRM UI.</li><li>To obtain an API key, go to the <strong>Settings</strong> cog > <strong>User Management</strong></li><li>Search and go to an existing administrator user (You) record.</li><li>On the user page, enable <strong>API Access</strong> and copy the API key.</li><li>See the <a href='https://developer.neoncrm.com/authentication/' target='_blank'>NeonCRM API Authentication</a> for more details if needed.</li></ul><li>In Bytespree, provide the Organization ID and API Key you just copied.</li><li>Click \"Connect to NeonCRM\" in Bytespree</li><li>Finish database setup</li></ol></div>",
+  "known_limitations": [
+    "Neon CRM API defines rate limits in terms of number of requests per thread pool. All API endpoints are limited to 5 requests per second."
+  ],
+  "use_tables": true,
+  "logo_path": "logo.png",
+  "full_replace": true,
+  "settings": [
+    {
+      "name": "org_id",
+      "friendly_name": "Organization ID",
+      "description": "Your NeonCRM Organization ID",
+      "is_secure": false,
+      "is_required": true,
+      "setting_type": "integration"
+    },
+    {
+      "name": "api_key",
+      "friendly_name": "API Key",
+      "description": "Your NeonCRM API Access Key",
+      "is_secure": true,
+      "is_required": true,
+      "setting_type": "integration"
+    }
+  ]
+}
